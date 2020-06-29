@@ -28,18 +28,28 @@
     <van-cell-group title>
       <van-cell title="账户与安全" center is-link />
     </van-cell-group>
-    <van-cell-group title>
+    <van-cell-group title="系统设置">
       <van-cell title="系统权限" center is-link />
     </van-cell-group>
     <van-cell-group title>
       <van-cell title="分享APP" center is-link />
     </van-cell-group>
     <van-cell-group title>
-      <!--
-      <van-cell title="关于作者" center is-link to="/person/author"/>
-      -->
       <van-cell title="关于作者" center is-link @click="showAuthor" />
     </van-cell-group>
+
+    <div class="login-button">
+      <van-button
+        size="large"
+        plain
+        hairline
+        width="100%"
+        round
+        type="info"
+        color="#ff2150"
+        >退出登录</van-button
+      >
+    </div>
   </div>
 </template>
 
@@ -50,17 +60,19 @@ export default {
       this.$router.go(-1);
     },
     showAuthor: function() {
-      this.$dialog.alert({
-        messageAlign: "left",
-        confirmButtonColor: "#333",
-        overlayStyle: {
-            'opacity': 1
-        },
-        message: `一枚成长中的全沾工程师~,联系电话18883251958
+      this.$dialog
+        .alert({
+          messageAlign: "left",
+          confirmButtonColor: "#333",
+          overlayStyle: {
+            opacity: 1,
+          },
+          message: `一枚成长中的全沾工程师~,联系电话18883251958
         `,
-      }).then(() => {
-        // on close
-      });
+        })
+        .then(() => {
+          // on close
+        });
     },
   },
 };
@@ -82,5 +94,12 @@ export default {
 .avator .info span {
   font-size: 10px;
   color: #999;
+}
+
+.login-button {
+  width: 90%;
+  position: fixed;
+  left: 5%;
+  bottom: 1rem;
 }
 </style>
