@@ -16,26 +16,62 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: '首页',
+      showNavTabs: true
+    }
   },
   {
     path: "/index",
     name: "Home",
     component: Home,
+    meta: {
+      title: '首页',
+      showNavTabs: true
+    }
   },
   {
     path: "/person",
     name: "person",
-    component: Person
+    component: Person,
+    meta: {
+      title: '个人中心',
+      showNavTabs: true
+    }
+  },
+  {
+    path: "/person/manager",
+    name: "personManager",
+    component: () => import('@/views/person/personManager'),
+    meta: {
+      title: '设置'
+    }
+  },
+  {
+    path: "/person/author",
+    name: "author",
+    component: () => import('@/views/person/author'),
+    meta: {
+      title: '作者简介'
+    }
   },
   {
     path: "/cart",
     name: "About",
-    component: About
+    component: About,
+    meta: {
+      tilte: '购物车',
+      showNavTabs: true
+    }
   },
   {
     path: "/chat",
     name: "About",
-    component: About
+    component: About,
+    meta: {
+      title: '消息中心',
+      showNavTabs: true
+    }
   }
 ];
 

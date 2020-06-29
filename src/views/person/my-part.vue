@@ -10,11 +10,11 @@
         <p class="p2">优惠券</p>
       </li>
       <li>
-        <p class="p1">0.00</p>
+        <p class="p1">10</p>
         <p class="p2">订单数量</p>
       </li>
       <li>
-        <p class="p1">0.00</p>
+        <p class="p1">8</p>
         <p class="p2">支付订单</p>
       </li>
       <li>
@@ -29,7 +29,7 @@
 .my-part {
   position: relative;
   margin-top: -2rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .my-part ul {

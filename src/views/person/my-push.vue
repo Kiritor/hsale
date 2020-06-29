@@ -6,12 +6,12 @@
 
 <style scoped>
 .my-push-goods {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     margin-top: 0.4rem;
 }
 .my-push-goods img {
     margin: 0 auto;
     display: block;
-    height: 1.5rem;
+    height: 1.2rem;
 }
 </style>

@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="right-box">
-                <a href="shezhi.html">设置</a>
+                <a @click="personManager">设置</a>
             </div>
             <div class="clear"></div>
         </div>
@@ -62,6 +62,11 @@ import PushGoodsList from "./my-push"
 export default {
     components: {
         MyPart,MyOrders,MyCounp,MyTools,PushGoodsList
+    },
+    methods: {
+        personManager: function(){
+            this.$router.push("/person/manager")
+        }
     }
 };
 </script>
@@ -104,7 +109,7 @@ img {
 
 .page-header .avator-box .btR .p1 {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .page-header .right-box {

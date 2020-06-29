@@ -55,7 +55,7 @@
 
 <style scoped>
 .my-tools {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   margin-top: 0.8rem;
 }
 

@@ -48,7 +48,7 @@ export default {};
 
 <style scoped>
 .my-orders {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     margin-top: 0.8rem;
 }
 
