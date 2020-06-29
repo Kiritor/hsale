@@ -43,6 +43,11 @@
     <my-orders></my-orders>
     <!-- 我的优惠券 -->
     <my-counp></my-counp>
+    <!-- 工具按钮区 -->
+    <my-tools></my-tools>
+    <!-- 商品推荐区 -->
+    <push-goods-list></push-goods-list>
+    <div class="box"></div>
 </div>
     
 </template>
@@ -51,10 +56,12 @@
 import MyPart from "./my-part";
 import MyOrders from "./my-orders"
 import MyCounp from "./my-counp"
+import MyTools from "./my-tools"
+import PushGoodsList from "./my-push"
 
 export default {
     components: {
-        MyPart,MyOrders,MyCounp
+        MyPart,MyOrders,MyCounp,MyTools,PushGoodsList
     }
 };
 </script>
@@ -142,5 +149,8 @@ img {
 
 .clear {
     clear: both;
+}
+.box {
+    height: 4rem;
 }
 </style>
