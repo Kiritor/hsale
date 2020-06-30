@@ -2,13 +2,13 @@
   <div id="app">
     <router-view></router-view>
     <tab-bar v-if="$route.meta.showNavTabs">
-      <tab-bar-item path="/index" activeColor="#ff2150">
+      <tab-bar-item path="/" activeColor="#ff2150">
         <van-icon slot="item-icon" name="wap-home" size="18" />
         <van-icon slot="item-icon-active" name="wap-home" size="18" />
         <p slot="item-text">首页</p>
       </tab-bar-item>
 
-      <tab-bar-item path="/chat" activeColor="#ff2150">
+      <tab-bar-item path="/message" activeColor="#ff2150">
         <van-icon slot="item-icon" name="chat" size="18" />
         <van-icon slot="item-icon-active" name="chat" size="18" />
         <p slot="item-text">消息</p>

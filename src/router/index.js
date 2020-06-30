@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/home/index";
 import Person from "../views/person/index"
-import About from "../views/About.vue"
+import Cart from "../views/cart/index"
+import Message from "../views/message/index"
 
 Vue.use(VueRouter);
 //解决重复点击路由报错的问题
@@ -13,7 +14,7 @@ const originalPush = VueRouter.prototype.push
 
 const routes = [
   {
-    path: "/",
+    path: "",
     name: "Home",
     component: Home,
     meta: {
@@ -57,17 +58,17 @@ const routes = [
   },
   {
     path: "/cart",
-    name: "About",
-    component: About,
+    name: "Cart",
+    component: Cart,
     meta: {
       tilte: '购物车',
       showNavTabs: true
     }
   },
   {
-    path: "/chat",
-    name: "About",
-    component: About,
+    path: "/message",
+    name: "Message",
+    component: Message,
     meta: {
       title: '消息中心',
       showNavTabs: true
