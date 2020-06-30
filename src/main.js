@@ -13,6 +13,10 @@ import { Search } from 'vant';
 import { Swipe, SwipeItem } from 'vant';
 import { Lazyload } from 'vant';
 import { Grid, GridItem } from 'vant';
+import { Divider } from 'vant';
+import { NoticeBar } from 'vant';
+import "./assets/css/common.css";
+
 
 Vue.use(Icon);
 Vue.use(VanImage);
@@ -28,6 +32,8 @@ Vue.use(SwipeItem);
 Vue.use(Lazyload);
 Vue.use(Grid);
 Vue.use(GridItem);
+Vue.use(Divider);
+Vue.use(NoticeBar);
 
 Vue.config.productionTip = false
 

@@ -14,13 +14,8 @@ const originalPush = VueRouter.prototype.push
 
 const routes = [
   {
-    path: "",
-    name: "Home",
-    component: Home,
-    meta: {
-      title: '首页',
-      showNavTabs: true
-    }
+    path: "/",
+    redirect: "/index"
   },
   {
     path: "/index",

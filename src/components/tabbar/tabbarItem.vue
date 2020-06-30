@@ -16,10 +16,11 @@ export default {
     activeColor: {
       type: String,
       default: "#ff2150",
-    },
+    }
   },
   computed: {
     isActive() {
+      //
       return this.$route.path.indexOf(this.path) !== -1;
     },
     activeStyle() {
