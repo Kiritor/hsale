@@ -39,9 +39,12 @@
         <img src="@/assets/img/ad.jpg" />
     </div>
     <div class="kbox"></div>
+    <!-- 热卖区域 -->
     <div class="hot-market">
         <hot-market></hot-market>
     </div>
+    <div class="kbox"></div>
+    <div><brand-hot></brand-hot></div>
     <div class="kbox" style="height: 150px"></div>
 </div>
 </template>
@@ -51,12 +54,14 @@ import SearchBar from "@/components/search/index";
 import NoticeBar from "@/components/noticebar/index";
 import TimeCost from "@/views/time-cost/index";
 import HotMarket from "@/views/hotmarket/index";
+import BrandHot from "@/views/brand-hot/index"
 export default {
     components: {
         SearchBar,
         NoticeBar,
         TimeCost,
-        HotMarket
+        HotMarket,
+        BrandHot
     },
     data() {
         return {
@@ -120,7 +125,7 @@ export default {
 <style scoped>
 .search-container {
     padding: 0.3rem 0;
-    position: fixed;
+    position: absolute;
     top: 0%;
     width: 100%;
     z-index: 9999;
