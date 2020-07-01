@@ -44,14 +44,6 @@ const routes = [
     }
   },
   {
-    path: "/person/author",
-    name: "author",
-    component: () => import('@/views/person/author'),
-    meta: {
-      title: '作者简介'
-    }
-  },
-  {
     path: "/cart",
     name: "Cart",
     component: Cart,
