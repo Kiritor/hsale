@@ -15,8 +15,11 @@ import { Lazyload } from 'vant';
 import { Grid, GridItem } from 'vant';
 import { Divider } from 'vant';
 import { NoticeBar } from 'vant';
-import "./assets/css/common.css";
+import { Checkbox, CheckboxGroup } from 'vant';
+import { Stepper } from 'vant';
 
+
+import "./assets/css/common.css";
 
 Vue.use(Icon);
 Vue.use(VanImage);
@@ -34,6 +37,9 @@ Vue.use(Grid);
 Vue.use(GridItem);
 Vue.use(Divider);
 Vue.use(NoticeBar);
+Vue.use(Checkbox);
+Vue.use(CheckboxGroup);
+Vue.use(Stepper);
 
 Vue.config.productionTip = false
 

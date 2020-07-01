@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/home/index";
+import Index from "../views/home/index";
 import Person from "../views/person/index"
 import Cart from "../views/cart/index"
 import Message from "../views/message/index"
@@ -19,8 +19,8 @@ const routes = [
   },
   {
     path: "/index",
-    name: "Home",
-    component: Home,
+    name: "Index",
+    component: Index,
     meta: {
       title: '首页',
       showNavTabs: true
@@ -57,8 +57,7 @@ const routes = [
     name: "Message",
     component: Message,
     meta: {
-      title: '消息中心',
-      showNavTabs: true
+      title: '消息中心'
     }
   }
 ];

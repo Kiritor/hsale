@@ -80,5 +80,8 @@ i {
 img {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border: 0;
 }
 </style>
