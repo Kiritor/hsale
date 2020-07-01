@@ -38,19 +38,25 @@
     <div class="caps-ad">
         <img src="@/assets/img/ad.jpg" />
     </div>
-    <div class="kbox" style="height: 50px"></div>
+    <div class="kbox"></div>
+    <div class="hot-market">
+        <hot-market></hot-market>
+    </div>
+    <div class="kbox" style="height: 150px"></div>
 </div>
 </template>
 
 <script>
 import SearchBar from "@/components/search/index";
 import NoticeBar from "@/components/noticebar/index";
-import TimeCost from "@/views/time-cost/index"
+import TimeCost from "@/views/time-cost/index";
+import HotMarket from "@/views/hotmarket/index";
 export default {
     components: {
         SearchBar,
         NoticeBar,
-        TimeCost
+        TimeCost,
+        HotMarket
     },
     data() {
         return {
@@ -162,5 +168,11 @@ export default {
 .caps-ad img {
     width: 100%;
     display: block;
+}
+.hot-market {
+    overflow: hidden;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    background: #fff;
 }
 </style>
