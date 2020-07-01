@@ -85,6 +85,7 @@ export default {
 
 .hotContainer .buy-box a.more {
   float: right;
+  margin-right: 0.1rem;
   height: 1.5rem;
   width: 1rem;
   margin-top: 0.25rem;

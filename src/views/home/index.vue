@@ -45,6 +45,10 @@
     </div>
     <div class="kbox"></div>
     <div><brand-hot></brand-hot></div>
+    <div class="kbox"></div>
+    <div class="hot-activity">
+        <hot-activity></hot-activity>
+    </div>
     <div class="kbox" style="height: 150px"></div>
 </div>
 </template>
@@ -54,14 +58,16 @@ import SearchBar from "@/components/search/index";
 import NoticeBar from "@/components/noticebar/index";
 import TimeCost from "@/views/time-cost/index";
 import HotMarket from "@/views/hotmarket/index";
-import BrandHot from "@/views/brand-hot/index"
+import BrandHot from "@/views/brand-hot/index";
+import HotActivity from "@/views/hot-activity/index";
 export default {
     components: {
         SearchBar,
         NoticeBar,
         TimeCost,
         HotMarket,
-        BrandHot
+        BrandHot,
+        HotActivity
     },
     data() {
         return {
