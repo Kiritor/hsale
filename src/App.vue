@@ -73,6 +73,9 @@ a {
   text-decoration: none;
   color: #666;
 }
+i {
+  font-style: normal;
+}
 
 img {
   margin: 0;
