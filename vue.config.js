@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+  // 定义基础路径baseUrl在vue-3.0被废除
+  publicPath: process.env.NODE_ENV === 'production'
+  ? './'
+  : '/',
   // 定制vant主题
   chainWebpack: config => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
