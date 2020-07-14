@@ -61,7 +61,7 @@ export default {
   methods: {
     logout: function() {
       this.$cookie.delete('isLogin');
-      this.$cookie.delete('token');
+      //this.$cookie.delete('token');
       this.$router.push("/login")
     },
     goBack: function() {
