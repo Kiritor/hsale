@@ -14,6 +14,6 @@
 > 6. 登录页面(后端接口token集成)
 
 ## 相关截图
-![首页](https://sbimg.cn/image/CKskY)
+![首页.png](https://wx2.sbimg.cn/2020/07/14/CKskY.png)
 
 
