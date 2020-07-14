@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
+import VueCookie from 'vue-cookie'
 import { Icon } from 'vant';
 import { Image as VanImage } from 'vant'
 import { NavBar } from 'vant';
@@ -17,6 +19,10 @@ import { Divider } from 'vant';
 import { NoticeBar } from 'vant';
 import { Checkbox, CheckboxGroup } from 'vant';
 import { Stepper } from 'vant';
+import { Form } from 'vant';
+import { Field } from 'vant';
+import { Switch } from 'vant';
+
 
 
 import "./assets/css/common.css";
@@ -40,8 +46,14 @@ Vue.use(NoticeBar);
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
 Vue.use(Stepper);
+Vue.use(Field);
+Vue.use(Form);
+Vue.use(Switch);
 
 Vue.config.productionTip = false
+Vue.prototype.$axios = axios
+Vue.prototype.$cookie = VueCookie
+
 
 new Vue({
   router,

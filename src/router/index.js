@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VueCookie from "vue-cookie";
 import VueRouter from "vue-router";
 import Index from "../views/home/index";
 import Person from "../views/person/index"
@@ -6,6 +7,8 @@ import Cart from "../views/cart/index"
 import Message from "../views/message/index"
 
 Vue.use(VueRouter);
+Vue.use(VueCookie);
+Vue.prototype.$cookie = VueCookie;
 //解决重复点击路由报错的问题
 const originalPush = VueRouter.prototype.push
     VueRouter.prototype.push = function push(location) {
@@ -23,7 +26,8 @@ const routes = [
     component: Index,
     meta: {
       title: '首页',
-      showNavTabs: true
+      showNavTabs: true,
+      noNeedAuth: true
     }
   },
   {
@@ -32,7 +36,8 @@ const routes = [
     component: Person,
     meta: {
       title: '个人中心',
-      showNavTabs: true
+      showNavTabs: true,
+      noNeedAuth: false
     }
   },
   {
@@ -40,7 +45,8 @@ const routes = [
     name: "personManager",
     component: () => import('@/views/person/personManager'),
     meta: {
-      title: '设置'
+      title: '设置',
+      noNeedAuth: true
     }
   },
   {
@@ -48,8 +54,9 @@ const routes = [
     name: "Cart",
     component: Cart,
     meta: {
-      tilte: '购物车',
-      showNavTabs: true
+      title: '购物车',
+      showNavTabs: true,
+      noNeedAuth: true
     }
   },
   {
@@ -57,15 +64,52 @@ const routes = [
     name: "Message",
     component: Message,
     meta: {
-      title: '消息中心'
+      title: '消息中心',
+      noNeedAuth: true
+    }
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import('@/views/login/index'),
+    meta: {
+      title: '登录'
     }
   }
 ];
 
+
+
+
 const router = new VueRouter({
-  //mode: "history",
+  mode: "history",
   base: process.env.BASE_URL,
   routes,
 });
 
 export default router;
+
+router.beforeEach(async (to,from,next) => {
+  // 为页面设置title
+  document.title = to.meta.title;
+  //if (sessionStorage.getItem("isLogin")==null || sessionStorage.getItem("isLogin")==false) {
+  if(VueCookie.get("isLogin")==null || VueCookie.get("isLogin")==false ) {
+    // this route requires auth, check if logged in
+    // if not, redirect to login page.
+    if (to.meta.noNeedAuth) {  
+      //已经登录了
+      next()
+    } else {
+      if (to.path === '/login') { // 如果是登录页面的话，直接next() -->解决注销后的循环执行bug
+        next()
+      } else {
+        next({
+          path: '/login',
+          query: { returnUrl: to.fullPath }//把要跳转的地址作为参数传到下一步
+        })
+      }
+    }
+  } else {
+    next() // 确保一定要调用 next()
+  }
+})

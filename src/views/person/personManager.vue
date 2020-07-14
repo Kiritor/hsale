@@ -47,6 +47,7 @@
         round
         type="info"
         color="#ff2150"
+        @click="logout"
         >退出登录</van-button
       >
     </div>
@@ -54,8 +55,15 @@
 </template>
 
 <script>
+
+
 export default {
   methods: {
+    logout: function() {
+      this.$cookie.delete('isLogin');
+      this.$cookie.delete('token');
+      this.$router.push("/login")
+    },
     goBack: function() {
       this.$router.go(-1);
     },
