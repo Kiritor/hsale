@@ -43,10 +43,17 @@ const routes = [
   {
     path: "/person/manager",
     name: "personManager",
-    component: () => import('@/views/person/personManager'),
+    component: () => import('@/views/person/personManager/index'),
     meta: {
-      title: '设置',
-      noNeedAuth: true
+      title: '设置'
+    }
+  },
+  {
+    path: "/person/manager/info",
+    name: "personInfoManager",
+    component: () => import('@/views/person/personManager/personInfo'),
+    meta: {
+      title: '个人资料'
     }
   },
   {
@@ -56,7 +63,7 @@ const routes = [
     meta: {
       title: '购物车',
       showNavTabs: true,
-      noNeedAuth: true
+      noNeedAuth: false
     }
   },
   {
@@ -65,7 +72,7 @@ const routes = [
     component: Message,
     meta: {
       title: '消息中心',
-      noNeedAuth: true
+      noNeedAuth: false
     }
   },
   {

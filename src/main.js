@@ -22,7 +22,10 @@ import { Stepper } from 'vant';
 import { Form } from 'vant';
 import { Field } from 'vant';
 import { Switch } from 'vant';
-
+import { Uploader } from 'vant';
+import { DropdownMenu, DropdownItem } from 'vant';
+import { Popup } from 'vant';
+import { Picker } from 'vant';
 
 
 import "./assets/css/common.css";
@@ -49,6 +52,11 @@ Vue.use(Stepper);
 Vue.use(Field);
 Vue.use(Form);
 Vue.use(Switch);
+Vue.use(Uploader);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(Popup);
+Vue.use(Picker);
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

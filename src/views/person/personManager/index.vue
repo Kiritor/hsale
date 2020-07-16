@@ -2,7 +2,7 @@
   <div>
     <van-nav-bar title="设置" left-arrow @click-left="goBack" />
     <van-cell-group title="个人信息">
-      <van-cell is-link center>
+      <van-cell center is-link to="/person/manager/info">
         <template #title>
           <div class="avator">
             <div class="imgD">
@@ -11,12 +11,12 @@
                 fill="cover"
                 width="3rem"
                 height="3rem"
-                :src="require('@/assets/img/tx.jpg')"
+                :src="userInfo.image"
               ></van-image>
             </div>
             <div class="info">
-              <p class="title">小梁~</p>
-              <span>会员名: Kiritor</span>
+              <p class="title">{{ userInfo.userName }}~</p>
+              <span>会员名: {{ userInfo.account }}</span>
             </div>
           </div>
         </template>
@@ -55,9 +55,22 @@
 </template>
 
 <script>
-
+import pathList from '@/api/pathList'
 
 export default {
+  data() {
+    return {
+      userInfo: {}
+    }
+  },
+  beforeMount() {
+    this.$axios.get(pathList.resources.users.getUserInfo.replace('{userId}',this.$cookie.get("userId")))
+    .then((res) => {
+        if(res.data.code == 200 && res.data.status == 200) {
+          this.userInfo = res.data.data;
+        }
+    });
+  },
   methods: {
     logout: function() {
       this.$cookie.delete('isLogin');

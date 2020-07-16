@@ -1,16 +1,12 @@
 <template>
-    <van-pull-refresh
-        v-model="isLoading"
-        success-text="刷新成功"
-        @refresh="onRefresh"
-    >
+  <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
     <div>
       <div class="page-header">
         <div class="avator-box">
           <div class="avator">
-            <img src="@/assets/img/tx.jpg" class="tt" />
+            <img :src="userInfo.image" class="tt" @click="personManager"/>
             <div class="btR">
-              <p class="p1">小梁~</p>
+               <p class="p1">{{ userInfo.userName}}</p>
             </div>
           </div>
           <div class="right-box">
@@ -64,10 +60,13 @@ import MyCounp from "./my-counp";
 import MyTools from "./my-tools";
 import PushGoodsList from "./my-push";
 
+import pathList from "@/api/pathList"
+
 export default {
   data() {
     return {
       isLoading: false,
+      userInfo: {}
     };
   },
   components: {
@@ -75,19 +74,29 @@ export default {
     MyOrders,
     MyCounp,
     MyTools,
-    PushGoodsList,
+    PushGoodsList
+  },
+  mounted() {
+    this.$axios.get(pathList.resources.users.getUserInfo.replace('{userId}',this.$cookie.get("userId")))
+    .then((res) => {
+        if(res.data.code == 200 && res.data.status == 200) {
+          console.log(res.data)
+          this.userInfo = res.data.data;
+        }
+    });
   },
   methods: {
     personManager: function() {
       this.$router.push("/person/manager");
     },
     onRefresh() {
+      console.log(this.userName);
       setTimeout(() => {
         this.isLoading = false;
       }, 1000);
       this.isLoading = true;
-    },
-  },
+    }
+  }
 };
 </script>
 

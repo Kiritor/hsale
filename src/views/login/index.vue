@@ -55,7 +55,7 @@
 
 <script>
 //登录
-import LoginService from "@/api/login";
+import LoginService from "@/api/user";
 export default {
   data() {
     return {
@@ -87,6 +87,9 @@ export default {
         this.$store.commit("setToken", resp.headers.authorization);
         this.$store.commit("setLogin", true);
         this.$store.commit("remeber", this.isRemeber)
+        this.$cookie.set('userId',resp.data.data.id)
+        this.$cookie.set('userName',resp.data.data.userName)
+        //this.$cookie.set("avator",resp.data.data.image)
         if (this.$route.query.returnUrl) {
           this.$router.replace("/index");
         } else {
