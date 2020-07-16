@@ -14,6 +14,9 @@
 > 6. 登录页面(后端接口token集成)
 
 ## 相关截图
-![首页.png](https://wx2.sbimg.cn/2020/07/14/CKskY.png)
+<div align="center">
+<img src="http://liangtao.site/img/%E9%A6%96%E9%A1%B5.png" width="245" height="432" align="center"/>
+</div>
+
 
 
