@@ -1,12 +1,15 @@
 export default {
     resources: {
         auth: {
-            login: '/api/login'
+            login: '/userAPI/login'
         },
         users: {
-            getUserInfo: '/api/v1/users/{userId}',
-            updateAvator: '/api/v1/users/{userId}',
-            updateGender: '/api/v1/users/'
+            getUserInfo: '/userAPI/v1/users/{userId}',
+            updateAvator: '/userAPI/v1/users/{userId}',
+            updateGender: '/userAPI/v1/users/',
+        },
+        receiverAddresses: {
+            getReceiverAddressList: '/receiverAddressAPI/v1/receiverAddress/user/{userId}'
         }
     }
 } 

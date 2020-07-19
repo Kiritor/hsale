@@ -26,6 +26,7 @@ import { Uploader } from 'vant';
 import { DropdownMenu, DropdownItem } from 'vant';
 import { Popup } from 'vant';
 import { Picker } from 'vant';
+import { AddressList } from 'vant';
 
 
 import "./assets/css/common.css";
@@ -57,6 +58,7 @@ Vue.use(DropdownMenu);
 Vue.use(DropdownItem);
 Vue.use(Popup);
 Vue.use(Picker);
+Vue.use(AddressList);
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

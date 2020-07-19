@@ -57,6 +57,14 @@ const routes = [
     }
   },
   {
+    path: "/person/manager/address",
+    name: "addressInfo",
+    component: () => import('@/views/person/personManager/addressList'),
+    meta: {
+      title: '收货地址'
+    }
+  },
+  {
     path: "/cart",
     name: "Cart",
     component: Cart,

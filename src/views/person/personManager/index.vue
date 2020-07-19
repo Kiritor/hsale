@@ -23,7 +23,7 @@
       </van-cell>
     </van-cell-group>
     <van-cell-group title>
-      <van-cell title="我的收货地址" center is-link />
+      <van-cell title="我的收货地址" center is-link to="/person/manager/address" />
     </van-cell-group>
     <van-cell-group title>
       <van-cell title="账户与安全" center is-link />
