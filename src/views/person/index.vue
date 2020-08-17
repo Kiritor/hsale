@@ -4,9 +4,9 @@
       <div class="page-header">
         <div class="avator-box">
           <div class="avator">
-            <img :src="userInfo.image" class="tt" @click="personManager"/>
+            <img :src="userInfo.image" class="tt" @click="personManager" />
             <div class="btR">
-               <p class="p1">{{ userInfo.userName}}</p>
+              <p class="p1">{{ userInfo.userName}}</p>
             </div>
           </div>
           <div class="right-box">
@@ -46,6 +46,8 @@
       <my-counp></my-counp>
       <!-- 工具按钮区 -->
       <my-tools></my-tools>
+      <!-- 图表区 -->
+      <charts></charts>
       <!-- 商品推荐区 -->
       <push-goods-list></push-goods-list>
       <div class="box"></div>
@@ -59,8 +61,8 @@ import MyOrders from "./my-orders";
 import MyCounp from "./my-counp";
 import MyTools from "./my-tools";
 import PushGoodsList from "./my-push";
-
-import pathList from "@/api/pathList"
+import pathList from "@/api/pathList";
+import charts from "./charts";
 
 export default {
   data() {
@@ -74,7 +76,8 @@ export default {
     MyOrders,
     MyCounp,
     MyTools,
-    PushGoodsList
+    PushGoodsList,
+    charts
   },
   mounted() {
     this.$axios.get(pathList.resources.users.getUserInfo.replace('{userId}',this.$cookie.get("userId")))

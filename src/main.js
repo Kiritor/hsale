@@ -27,6 +27,15 @@ import { DropdownMenu, DropdownItem } from 'vant';
 import { Popup } from 'vant';
 import { Picker } from 'vant';
 import { AddressList } from 'vant';
+import { AddressEdit } from 'vant';
+// 引入echarts
+import echarts from 'echarts';
+import { RadioGroup, Radio } from 'vant';
+
+
+
+
+
 
 
 import "./assets/css/common.css";
@@ -59,10 +68,14 @@ Vue.use(DropdownItem);
 Vue.use(Popup);
 Vue.use(Picker);
 Vue.use(AddressList);
+Vue.use(AddressEdit);
+Vue.use(Radio);
+Vue.use(RadioGroup);
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 Vue.prototype.$cookie = VueCookie
+Vue.prototype.$echarts = echarts
 
 
 new Vue({

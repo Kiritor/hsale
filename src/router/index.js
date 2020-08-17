@@ -65,6 +65,22 @@ const routes = [
     }
   },
   {
+    path: "/person/manager/address/add",
+    name: "addAddress",
+    component: () => import('@/views/person/personManager/addressAdd'),
+    meta: {
+      title: '新增地址'
+    }
+  },
+  {
+    path: "/person/manager/address/edit",
+    name: "addAddress",
+    component: () => import('@/views/person/personManager/addressEdit'),
+    meta: {
+      title: '编辑地址'
+    }
+  },
+  {
     path: "/cart",
     name: "Cart",
     component: Cart,
