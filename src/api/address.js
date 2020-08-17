@@ -42,6 +42,18 @@ export default class LoginService {
     return response;
   }
 
+
+  static setDefaultAddress = async (vm,obj) => {
+    const config = {
+        headers: {
+            'Content-type': 'application/json',
+            authorization: store.state.token==null?"":store.state.token
+        }
+    }; 
+    const response = await axios.post(pathList.resources.receiverAddresses.setDefaultAddress,obj,config);
+    return response;
+  }
+
   static updateReceiverAddress = async (vm,obj) => {
     const config = {
         headers: {
@@ -63,6 +75,7 @@ export default class LoginService {
   const response = await axios.delete(pathList.resources.receiverAddresses.deleteReceiverAddressList.replace('{id}',id),config);
   return response;
   }
+
 
   static getReceiverAddress = async (vm,id) => {
     const config = {

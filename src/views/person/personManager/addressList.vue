@@ -49,7 +49,6 @@ export default {
       this.$cookie.get("userId")
     );
     const dataList = res.data.data;
-    console.log(dataList);
     this.addressList = dataList;
   },
   methods: {
