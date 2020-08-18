@@ -28,15 +28,10 @@ import { Popup } from 'vant';
 import { Picker } from 'vant';
 import { AddressList } from 'vant';
 import { AddressEdit } from 'vant';
+import { Tab, Tabs } from 'vant';
 // 引入echarts
 import echarts from 'echarts';
 import { RadioGroup, Radio } from 'vant';
-
-
-
-
-
-
 
 import "./assets/css/common.css";
 
@@ -71,6 +66,8 @@ Vue.use(AddressList);
 Vue.use(AddressEdit);
 Vue.use(Radio);
 Vue.use(RadioGroup);
+Vue.use(Tab);
+Vue.use(Tabs);
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

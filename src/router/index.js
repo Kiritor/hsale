@@ -31,6 +31,24 @@ const routes = [
     }
   },
   {
+    path: "/search",
+    name: "search",
+    component: () => import('@/views/search/search'),
+    meta: {
+      title: '搜索',
+      noNeedAuth: false
+    }
+  },
+  {
+    path: "/searchResult",
+    name: "searchResult",
+    component: () => import('@/views/search/searchResult'),
+    meta: {
+      title: '搜索',
+      noNeedAuth: false
+    }
+  },
+  {
     path: "/person",
     name: "person",
     component: Person,

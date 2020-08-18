@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- 顶部搜索按钮 -->
-    <div class="search-container">
+    <div class="search-container" @click="goToSearch">
         <search-bar></search-bar>
     </div>
     <!-- 顶部轮播图 -->
@@ -130,7 +130,12 @@ export default {
                 }
             ]
         };
-    }
+    },
+    methods: {
+        goToSearch: function(){
+            this.$router.push("/search")
+        }
+    },
 };
 </script>
 

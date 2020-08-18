@@ -49,7 +49,8 @@ export default {
   data() {
     return {
       cart: "购物车",
-      checked: true
+      checked: true,
+      value: 1
     };
   },
   methods: {

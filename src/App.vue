@@ -65,13 +65,15 @@ body {
   width: 100%;
   height: 100%;
 }
-
+#app {
+  background: #f7f7f7;
+}
 body {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
   color: #666;
-  background: #f7f7f7;
+ 
   font-size: 12px;
   overflow-x: hidden;
 }
@@ -95,5 +97,8 @@ img {
   max-width: 100%;
   max-height: 100%;
   border: 0;
+}
+hr {
+  border: 1px solid #eee;
 }
 </style>
