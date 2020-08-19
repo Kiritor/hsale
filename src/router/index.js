@@ -40,11 +40,20 @@ const routes = [
     }
   },
   {
-    path: "/searchResult",
-    name: "searchResult",
-    component: () => import('@/views/search/searchResult'),
+    path: "/goods",
+    name: "goods",
+    component: () => import('@/views/goods/goodsList'),
     meta: {
-      title: '搜索',
+      title: '商品列表',
+      noNeedAuth: false
+    }
+  },
+  {
+    path: "/shop",
+    name: "shop",
+    component: () => import('@/views/shop/shopList'),
+    meta: {
+      title: '店铺列表',
       noNeedAuth: false
     }
   },

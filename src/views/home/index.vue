@@ -54,6 +54,7 @@
         <recommond></recommond>
     </div>
     <div class="kbox" style="height: 42px;clear: both"></div>
+    <top></top>
 </div>
 </template>
 
@@ -65,6 +66,8 @@ import HotMarket from "@/views/hotmarket/index";
 import BrandHot from "@/views/brand-hot/index";
 import HotActivity from "@/views/hot-activity/index";
 import Recommond from "@/views/recommond/index";
+import Top from "@/components/top/index";
+
 export default {
     components: {
         SearchBar,
@@ -73,7 +76,8 @@ export default {
         HotMarket,
         BrandHot,
         HotActivity,
-        Recommond
+        Recommond,
+        Top
     },
     data() {
         return {

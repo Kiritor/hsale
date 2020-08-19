@@ -70,7 +70,7 @@ export default {
       this.$router.go(-1);
     },
     goToSearch: function() {
-      this.$router.push({path: "/searchResult",query: {key: encodeURIComponent(this.key)}});
+      this.$router.push({path: "/goods",query: {key: encodeURIComponent(this.key)}});
     }
   },
 };
